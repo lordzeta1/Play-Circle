@@ -496,12 +496,15 @@ if st.session_state.page == "Home":
 
         if st.button("✊ PLAY ROCK PAPER SCISSORS", key="home_rps"):
             go_to("Rock Paper Scissors")
-
-    with col4:
+            
+            with col4:
         st.markdown("""
         <div class="game-card">
             <div class="game-icon">🏆</div>
             <h3>LEADERBOARD</h3>
             <p>View your current session points and progress.</p>
         </div>
-        """, unsafe_allow_html
+        """, unsafe_allow_html=True)
+
+        if st.button("🏆 VIEW LEADERBOARD", key="home_leaderboard"):
+            go_to("Leaderboard")
